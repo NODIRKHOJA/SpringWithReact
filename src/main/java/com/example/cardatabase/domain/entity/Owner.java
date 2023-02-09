@@ -11,7 +11,6 @@ public class Owner {
     private long ownerId;
     private String firstName;
     private String lastName;
-
     public Owner() {}
 
     public Owner(String firstName, String lastName) {
