@@ -2,6 +2,8 @@ package com.example.cardatabase.domain.entity;
 
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Car {
@@ -36,9 +38,19 @@ public class Car {
     @JoinColumn(name = "owner")
     private Owner owner;
 
+//    @ManyToMany(mappedBy = "cars")
+//    private Set<Owner> owners = new HashSet<Owner>();
+//    public Set<Owner> getOwners(){
+//        return owners;
+//    }
+
     //Getter  and  setter
     public Owner getOwner()  {
         return owner;
+    }
+
+    public void setOwner(Owner owner){
+        this.owner = owner;
     }
 
     public long getId() {
